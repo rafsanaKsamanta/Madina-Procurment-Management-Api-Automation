@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "c2da6a93-1821-487d-a7b8-8d2126a15ff7",
+		"name": "Madina - Procurement Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24752461"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJjOTBmZjllMy1hYzEwLTQxN2UtYTUwNy0zMTdhZjI3NGJiZTYiLCJlbnJvbGwiOiJRcmkzMzc2RUZwanhKZEJCYXVHWkxnPT0iLCJlbWFpbGFkZHJlc3MiOiJwYXJ2ZWpAbWFkaW5hLmNvIiwidXNlcklkIjoxLCJhY2NvdW50SWQiOjEsInNvY2tldCI6Im1hZGluYS1zb2NrZXQuaWJvcy5pbyIsInN1YiI6InBhcnZlakBtYWRpbmEuY28iLCJqdGkiOiJiNzk4MWJkYy1jYTg4LTQwNWUtOWQyZi0yZGJkOTY1ZDBmYWYiLCJpYXQiOiIwOS8wNS8yMDIzIDA0OjE2OjM1IiwiZXhwIjoxNjkzODUwNDAwLCJpc3MiOiJBa2lqSW5mb1RlY2ggTHRkLiAiLCJhdWQiOiJBdWRpZW5jZSJ9.QH0I3OwrvxriQ_Cnxu5wsPM3CgUoUo9Qhcr1i3xKLio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"parvej@madina.co\",\r\n  \"password\": \"ibos@123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://madina.ibos.io/identity/TokenGenerate/IbosLogin\n",
+					"protocol": "https",
+					"host": [
+						"madina",
+						"ibos",
+						"io"
+					],
+					"path": [
+						"identity",
+						"TokenGenerate",
+						"IbosLogin\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Standard Purchase Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJjOTBmZjllMy1hYzEwLTQxN2UtYTUwNy0zMTdhZjI3NGJiZTYiLCJlbnJvbGwiOiJRcmkzMzc2RUZwanhKZEJCYXVHWkxnPT0iLCJlbWFpbGFkZHJlc3MiOiJwYXJ2ZWpAbWFkaW5hLmNvIiwidXNlcklkIjoxLCJhY2NvdW50SWQiOjEsInNvY2tldCI6Im1hZGluYS1zb2NrZXQuaWJvcy5pbyIsInN1YiI6InBhcnZlakBtYWRpbmEuY28iLCJqdGkiOiJiNzk4MWJkYy1jYTg4LTQwNWUtOWQyZi0yZGJkOTY1ZDBmYWYiLCJpYXQiOiIwOS8wNS8yMDIzIDA0OjE2OjM1IiwiZXhwIjoxNjkzODUwNDAwLCJpc3MiOiJBa2lqSW5mb1RlY2ggTHRkLiAiLCJhdWQiOiJBdWRpZW5jZSJ9.QH0I3OwrvxriQ_Cnxu5wsPM3CgUoUo9Qhcr1i3xKLio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"createPurchaseRequestHeader\": {\r\n        \"purchaseRequestCode\": \"\",\r\n        \"reffNo\": \"\",\r\n        \"purchaseRequestTypeId\": 1,\r\n        \"purchaseRequestTypeName\": \"Standard PR\",\r\n        \"accountId\": 1,\r\n        \"accountName\": \"Madina Group\",\r\n        \"businessUnitId\": 1,\r\n        \"businessUnitName\": \"Madina Polymer Industries Ltd\",\r\n        \"sbuid\": 1,\r\n        \"sbuname\": \"Madina Polymer Industries Ltd\",\r\n        \"purchaseOrganizationId\": 1,\r\n        \"purchaseOrganizationName\": \"Local Procurement\",\r\n        \"plantId\": 4,\r\n        \"plantName\": \"Gas Stove\",\r\n        \"warehouseId\": 4,\r\n        \"warehouseName\": \"Gas Stove WH (MPIL)\",\r\n        \"deliveryAddress\": \"\",\r\n        \"supplyingWarehouseId\": 0,\r\n        \"supplyingWarehouseName\": \"\",\r\n        \"requestDate\": \"2023-09-04\",\r\n        \"actionBy\": 1,\r\n        \"requiredDate\": \"2023-09-04\",\r\n        \"strPurpose\": \"test\"\r\n    },\r\n    \"createPurchaseRequestRow\": [\r\n        {\r\n            \"itemId\": 40,\r\n            \"uoMid\": 103,\r\n            \"uoMname\": \"Pices\",\r\n            \"numRequestQuantity\": 150,\r\n            \"dteRequiredDate\": \"2023-09-03T18:00:00.000Z\",\r\n            \"remarks\": \"testing purpose\",\r\n            \"useFor\": \"test\",\r\n            \"departmentId\": 11,\r\n            \"departmentName\": \"Marketing\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://madina.ibos.io/procurement/PurchaseRequest/CreatePurchaseRequestInfo",
+					"protocol": "https",
+					"host": [
+						"madina",
+						"ibos",
+						"io"
+					],
+					"path": [
+						"procurement",
+						"PurchaseRequest",
+						"CreatePurchaseRequestInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asset Purchase Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJjOTBmZjllMy1hYzEwLTQxN2UtYTUwNy0zMTdhZjI3NGJiZTYiLCJlbnJvbGwiOiJRcmkzMzc2RUZwanhKZEJCYXVHWkxnPT0iLCJlbWFpbGFkZHJlc3MiOiJwYXJ2ZWpAbWFkaW5hLmNvIiwidXNlcklkIjoxLCJhY2NvdW50SWQiOjEsInNvY2tldCI6Im1hZGluYS1zb2NrZXQuaWJvcy5pbyIsInN1YiI6InBhcnZlakBtYWRpbmEuY28iLCJqdGkiOiJiNzk4MWJkYy1jYTg4LTQwNWUtOWQyZi0yZGJkOTY1ZDBmYWYiLCJpYXQiOiIwOS8wNS8yMDIzIDA0OjE2OjM1IiwiZXhwIjoxNjkzODUwNDAwLCJpc3MiOiJBa2lqSW5mb1RlY2ggTHRkLiAiLCJhdWQiOiJBdWRpZW5jZSJ9.QH0I3OwrvxriQ_Cnxu5wsPM3CgUoUo9Qhcr1i3xKLio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"attachments\": [],\r\n    \"createPurchaseRequestHeader\": {\r\n        \"purchaseRequestCode\": \"\",\r\n        \"reffNo\": \"\",\r\n        \"purchaseRequestTypeId\": 2,\r\n        \"purchaseRequestTypeName\": \"Service PR\",\r\n        \"accountId\": 1,\r\n        \"accountName\": \"Madina Group\",\r\n        \"actionBy\": 1,\r\n        \"businessUnitId\": 1,\r\n        \"businessUnitName\": \"Madina Polymer Industries Ltd\",\r\n        \"deliveryAddress\": \"\",\r\n        \"plantId\": 4,\r\n        \"plantName\": \"Gas Stove\",\r\n        \"purchaseOrganizationId\": 1,\r\n        \"purchaseOrganizationName\": \"Local Procurement\",\r\n        \"purchaseRequestCode\": \"\",\r\n        \"purchaseRequestTypeId\": 2,\r\n        \"purchaseRequestTypeName\": \"Service PR\",\r\n        \"reffNo\": \"\",\r\n        \"requestDate\": \"2023-09-04\",\r\n        \"requiredDate\": \"2023-09-04\",\r\n        \"sbuid\": 1,\r\n        \"sbuname\": \"Madina Polymer Industries Ltd\",\r\n        \"strPurpose\": \"test\",\r\n        \"supplyingWarehouseId\": 0,\r\n        \"supplyingWarehouseName\": \"\",\r\n        \"warehouseId\": 4,\r\n        \"warehouseName\": \"Gas Stove WH (MPIL)\"\r\n    },\r\n    \"createPurchaseRequestRow\": [\r\n        {\r\n            \"availableStock\": 233,\r\n            \"businessTransaction\": {\r\n                \"value\": 168,\r\n                \"label\": \"AOH-Corporate Festival Bonus\"\r\n            },\r\n            \"businessTransactionId\": 168,\r\n            \"costCenterId\": 1,\r\n            \"costCenterName\": \"HR & Admin\",\r\n            \"departmentId\": 9,\r\n            \"departmentName\": \"Devlopment\",\r\n            \"dteRequiredDate\": \"2023-09-03T18:00:00.000Z\",\r\n            \"itemCategory\": \"Office Services\",\r\n            \"itemCode\": \"19000044\",\r\n            \"itemId\": 43,\r\n            \"itemName\": \"Walton-Air Conditioner [19000044]\",\r\n            \"itemSubCategory\": \"AC\",\r\n            \"itemType\": \"Services\",\r\n            \"monthlyAvgConsum\": 0,\r\n            \"numRequestQuantity\": 100,\r\n            \"pipelineQty\": 15,\r\n            \"profitCenterId\": 4,\r\n            \"profitCenterName\": \"Gas Stove\",\r\n            \"remarks\": \"test\",\r\n            \"rowDepartment\": {\r\n                \"value\": 9,\r\n                \"label\": \"Devlopment\"\r\n            },\r\n            \"uoMid\": 124,\r\n            \"uoMname\": \"Unit\",\r\n            \"useFor\": \"test\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://madina.ibos.io/procurement/PurchaseRequest/CreatePurchaseRequestInfo",
+					"protocol": "https",
+					"host": [
+						"madina",
+						"ibos",
+						"io"
+					],
+					"path": [
+						"procurement",
+						"PurchaseRequest",
+						"CreatePurchaseRequestInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service Purchase Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJjOTBmZjllMy1hYzEwLTQxN2UtYTUwNy0zMTdhZjI3NGJiZTYiLCJlbnJvbGwiOiJRcmkzMzc2RUZwanhKZEJCYXVHWkxnPT0iLCJlbWFpbGFkZHJlc3MiOiJwYXJ2ZWpAbWFkaW5hLmNvIiwidXNlcklkIjoxLCJhY2NvdW50SWQiOjEsInNvY2tldCI6Im1hZGluYS1zb2NrZXQuaWJvcy5pbyIsInN1YiI6InBhcnZlakBtYWRpbmEuY28iLCJqdGkiOiJiNzk4MWJkYy1jYTg4LTQwNWUtOWQyZi0yZGJkOTY1ZDBmYWYiLCJpYXQiOiIwOS8wNS8yMDIzIDA0OjE2OjM1IiwiZXhwIjoxNjkzODUwNDAwLCJpc3MiOiJBa2lqSW5mb1RlY2ggTHRkLiAiLCJhdWQiOiJBdWRpZW5jZSJ9.QH0I3OwrvxriQ_Cnxu5wsPM3CgUoUo9Qhcr1i3xKLio",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"attachments\": [],\r\n    \"createPurchaseRequestHeader\": {\r\n        \"purchaseRequestCode\": \"\",\r\n        \"reffNo\": \"\",\r\n        \"purchaseRequestTypeId\": 2,\r\n        \"purchaseRequestTypeName\": \"Service PR\",\r\n        \"accountId\": 1,\r\n        \"accountName\": \"Madina Group\",\r\n        \"actionBy\": 1,\r\n        \"businessUnitId\": 1,\r\n        \"businessUnitName\": \"Madina Polymer Industries Ltd\",\r\n        \"deliveryAddress\": \"\",\r\n        \"plantId\": 4,\r\n        \"plantName\": \"Gas Stove\",\r\n        \"purchaseOrganizationId\": 1,\r\n        \"purchaseOrganizationName\": \"Local Procurement\",\r\n        \"purchaseRequestCode\": \"\",\r\n        \"purchaseRequestTypeId\": 2,\r\n        \"purchaseRequestTypeName\": \"Service PR\",\r\n        \"reffNo\": \"\",\r\n        \"requestDate\": \"2023-09-04\",\r\n        \"requiredDate\": \"2023-09-04\",\r\n        \"sbuid\": 1,\r\n        \"sbuname\": \"Madina Polymer Industries Ltd\",\r\n        \"strPurpose\": \"test\",\r\n        \"supplyingWarehouseId\": 0,\r\n        \"supplyingWarehouseName\": \"\",\r\n        \"warehouseId\": 4,\r\n        \"warehouseName\": \"Gas Stove WH (MPIL)\"\r\n    },\r\n    \"createPurchaseRequestRow\": [\r\n        {\r\n            \"availableStock\": 233,\r\n            \"businessTransaction\": {\r\n                \"value\": 168,\r\n                \"label\": \"AOH-Corporate Festival Bonus\"\r\n            },\r\n            \"businessTransactionId\": 168,\r\n            \"costCenterId\": 1,\r\n            \"costCenterName\": \"HR & Admin\",\r\n            \"departmentId\": 9,\r\n            \"departmentName\": \"Devlopment\",\r\n            \"dteRequiredDate\": \"2023-09-03T18:00:00.000Z\",\r\n            \"itemCategory\": \"Office Services\",\r\n            \"itemCode\": \"19000044\",\r\n            \"itemId\": 43,\r\n            \"itemName\": \"Walton-Air Conditioner [19000044]\",\r\n            \"itemSubCategory\": \"AC\",\r\n            \"itemType\": \"Services\",\r\n            \"monthlyAvgConsum\": 0,\r\n            \"numRequestQuantity\": 100,\r\n            \"pipelineQty\": 15,\r\n            \"profitCenterId\": 4,\r\n            \"profitCenterName\": \"Gas Stove\",\r\n            \"remarks\": \"test\",\r\n            \"rowDepartment\": {\r\n                \"value\": 9,\r\n                \"label\": \"Devlopment\"\r\n            },\r\n            \"uoMid\": 124,\r\n            \"uoMname\": \"Unit\",\r\n            \"useFor\": \"test\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://madina.ibos.io/procurement/PurchaseRequest/CreatePurchaseRequestInfo",
+					"protocol": "https",
+					"host": [
+						"madina",
+						"ibos",
+						"io"
+					],
+					"path": [
+						"procurement",
+						"PurchaseRequest",
+						"CreatePurchaseRequestInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
